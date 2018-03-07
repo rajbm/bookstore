@@ -8,9 +8,6 @@ class BooksController < ApplicationController
     # render json: @books
     @books = Book.all
     @author  = Author.all
-    # respond_to do |format|
-    #   format.json  { render :json => {:author => @author}}
-    # end
     render json: {:authors => @author, :books => @books}
   end
 
